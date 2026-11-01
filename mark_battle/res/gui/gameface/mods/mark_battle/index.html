@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>MarkBattle</title>
+  <link rel="stylesheet" href="./index.css" />
+</head>
+<body>
+  <div id="root">
+    <div class="card" id="card">
+
+      <div class="stars" id="stars">
+        <span class="star" id="star1"></span>
+        <span class="star" id="star2"></span>
+        <span class="star" id="star3"></span>
+      </div>
+
+      <div class="silhouette-wrap">
+        <!-- Нижний слой: пустой силуэт -->
+        <div class="silhouette-empty"></div>
+        <!-- Верхний слой: цветная заливка, ширина = процент -->
+        <div class="silhouette-fill" id="silhouetteFill"></div>
+        <!-- Процент поверх -->
+        <div class="percent" id="percent">&mdash;</div>
+      </div>
+
+      <div class="summary" id="summary">
+        <span class="summary__avg" id="summaryAvg">0</span>
+        <span class="summary__delta" id="delta">&mdash;</span>
+        <span class="summary__target" id="summaryTarget"></span>
+      </div>
+
+    </div>
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>

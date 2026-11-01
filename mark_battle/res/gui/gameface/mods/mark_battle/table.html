@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>MarkBattle Table</title>
+  <link rel="stylesheet" href="./table.css" />
+</head>
+<body>
+  <div id="tableWindow" class="window">
+    <!-- Шапка окна (перетаскивание за неё) -->
+    <div id="headerBar" class="header">
+      <div class="header__titles">
+        <div class="header__title">Отметки на стволе</div>
+        <div id="headerSub" class="header__sub">статистика отметок · сервер RU-BY</div>
+      </div>
+      <div id="btnClose" class="header__close">X</div>
+    </div>
+
+    <!-- Панель фильтров -->
+    <div class="filters">
+      <div class="filter-group">
+        <div class="filter-label">УРОВЕНЬ</div>
+        <div id="filterLevels" class="filter-row"></div>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-label">ТИП</div>
+        <div id="filterTypes" class="filter-row"></div>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-label">НАЦИЯ</div>
+        <div id="filterNations" class="filter-row"></div>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-label">АНГАР</div>
+        <div id="filterHangar" class="filter-row">
+          <div class="f-btn f-btn--wide is-active" data-hangar="1">В ангаре</div>
+          <div class="f-btn f-btn--wide" data-hangar="0">Не в ангаре</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Шапка таблицы -->
+    <div class="thead">
+      <div class="col col--idx">#</div>
+      <div class="col col--nat" data-sort="n">Нация</div>
+      <div class="col col--name" data-sort="name">Танк</div>
+      <div class="col col--lvl" data-sort="lvl">Ур.</div>
+      <div class="col col--type" data-sort="tc">Тип</div>
+      <div class="col col--pct is-sorted" data-sort="pct">Мой %</div>
+      <div class="col col--marks" data-sort="mk">Отметки</div>
+      <div class="col col--m1" data-sort="m1"><span class="badge badge--1"></span></div>
+      <div class="col col--m2" data-sort="m2"><span class="badge badge--2"></span></div>
+      <div class="col col--m3" data-sort="m3"><span class="badge badge--3"></span></div>
+    </div>
+
+    <!-- Тело таблицы (21 строка на страницу) -->
+    <div id="tbody" class="tbody"></div>
+
+    <!-- Подвал с пагинацией и статусом -->
+    <div class="footer">
+      <div id="pagination" class="pagination"></div>
+      <div id="statusBar" class="status-bar">Техники: 0 из 0 · В ангаре: 0</div>
+    </div>
+  </div>
+  <script src="./table.js"></script>
+</body>
+</html>
