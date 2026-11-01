@@ -1,0 +1,6 @@
+<root>
+    <id>zai.markbattle</id>
+    <version>{{VERSION}}</version>
+    <name>markbattle</name>
+    <description>MarkBattle - gun marks tracker and hangar table (Gameface UI)</description>
+</root>
